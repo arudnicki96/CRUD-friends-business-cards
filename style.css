@@ -1,0 +1,47 @@
+.interactive-name-div,
+.business-card-div {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: lightblue;
+  border: 1px solid black;
+  margin: 0 auto;
+  width: 75%;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.create-data-div,
+.update-data-div {
+  align-items: center;
+  background-color: lightgreen;
+  margin: 0 auto;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.buttons-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: lightblue;
+  border: 1px solid black;
+  justify-content: space-around;
+  margin: 0 auto;
+  width: 75%;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.business-card-div {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-direction: row;
+}
+.cards {
+  width: 37%;
+}

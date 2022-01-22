@@ -1,0 +1,54 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="header-div">
+      <h1>Strona z wizytówkami</h1>
+    </div>
+
+    <div class="buttons-div">
+      <div class="create-div">
+        <button id="createBtn">Create New Business Card</button>
+
+        <div class="create-data-div">
+          <p>name:</p>
+          <input id="name" type="text" />
+          <p>phone-number</p>
+          <input id="phone-number" />
+          <p>email adress</p>
+          <input id="email-adress" />
+          <p>short job desctiption</p>
+          <input id="job" />
+          <p>photo</p>
+          <input type="file" id="photo" />
+          <button id="send-data-button">Create</button>
+        </div>
+      </div>
+
+      <div class="update-div">
+        <button id="updateBtn">Update Data</button>
+        <div class="update-data-div">
+          <p>name:</p>
+          <input id="name-update" type="text" />
+          <p>phone-number</p>
+          <input id="phone-number-update" />
+          <p>email adress</p>
+          <input id="email-adress-update" />
+          <p>short job desctiption</p>
+          <input id="job-update" />
+          <p>photo</p>
+          <input type="file" id="photo-update" />
+          <button id="update-data-button">Update</button>
+        </div>
+      </div>
+    </div>
+    <div class="interactive-name-div"></div>
+    <div class="business-card-div"></div>
+  </body>
+  <script src="script.js"></script>
+</html>
