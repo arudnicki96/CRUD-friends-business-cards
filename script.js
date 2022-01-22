@@ -1,5 +1,10 @@
 "use strict";
 
+//some definition of elements from HTML
+
+const businessCardDiv = document.querySelector(".business-card-div");
+const interactiveNameDiv = document.querySelector(".interactive-name-div");
+
 // so first thing is to create an object of friends
 // function is going to take new person's data and add them automatically to the object of friends
 
@@ -48,23 +53,41 @@ const Artur = new NewPerson(
 const friends = [Maks, Bobe, Antonio, Artur];
 
 //Now, in order to get ready for "Create" feature
-//Here is a function that will
+//Here is a function that will:
+
+//1. Create a link with person name, that when clicked, will show all person details
+//2. Create a box with all person details and button 'Hide'
 
 function insertDiv(person) {
-  const iDiv = document.createElement("div");
-  iDiv.id = person.name;
+  ///////////
+  const dataDiv = document.createElement("div");
+  dataDiv.id = person.name;
+  dataDiv.classList.add("cards");
+  /////////////////// adding profile picture
+  const profilePicture = document.createElement("img");
+  profilePicture.src = `img/${person.picture}`;
+  profilePicture.style.width = "150px";
+  profilePicture.style.height = "150px";
+
+  dataDiv.appendChild(profilePicture);
   const paragraph = document.createElement("p");
   const paragraphText = `${person.name} 
     ${person.phoneNumber} 
-    ${person.emailAdress}
+    ${person.emailAdress} 
     ${person.job}`;
 
   paragraph.textContent = paragraphText;
-  iDiv.appendChild(paragraph);
-  document.body.appendChild(iDiv);
+  dataDiv.appendChild(paragraph);
+  businessCardDiv.appendChild(dataDiv);
+
+  const interactiveDiv = document.createElement("div");
+  const mainName = document.createElement("p");
+  mainName.textContent = person.name;
+  interactiveDiv.appendChild(mainName);
+  interactiveNameDiv.appendChild(interactiveDiv);
+  interactiveDiv.addEventListener("click", function () {
+    dataDiv.classList.toggle("hidden");
+  });
 }
 
-insertDiv(Bobe);
-insertDiv(Maks);
-insertDiv(Antonio);
-insertDiv(Artur);
+friends.forEach((friend) => insertDiv(friend));
