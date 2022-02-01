@@ -8,7 +8,7 @@ Mks Padalak
 zdjęcie
 + 603 518 848
 mkspadalak@gmail.com
-SeniorReactDeveloper (Kurwa byku potrzebuję Twojego numeru telefonu) xD
+SeniorReactDeveloper
 
 1. Aplikacja CRUD ma dodane następujące elementy w UI:
 
